@@ -119,22 +119,4 @@ variable ( σ : Type)
 -- think of state as a hidden variable like in minecraft the world you generate depends on the seed, so the seed in
 --some sense is a state and our output depends on the state!!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end stateMonad
