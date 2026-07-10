@@ -128,4 +128,13 @@ def depth_bin_tree {α : Type} ( b : my_bin α ) : Nat :=
 #eval depth_bin_tree b2
 
 
+open my_bin --my_list to my_bin
+
+def my_list_to_my_bin {α  : Type} ( l : my_list α ) : my_bin α :=
+  match l with
+    | my_list.nil => nil
+    | my_list.cons h ( xs ) => node h ( my_list_to_my_bin ( xs )) ( nil)
+
+
+#eval print_bin_tree (node 43  ( my_list_to_my_bin l1 ) nil  )
 end langur
